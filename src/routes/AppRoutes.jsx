@@ -37,10 +37,9 @@ export default function AppRoutes() {
       <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
 
       <Route
-        path="/dashboard"
         element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}
       >
-        <Route index element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/history" element={<DonationHistory />} />
